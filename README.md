@@ -9,9 +9,10 @@ Pluralize and singularize any word
 > [gertd/go-pluralize](https://github.com/gertd/go-pluralize).
 >
 > If you for some reason have stumbled upon this repo, note that the
-> authoritative version is at https://git.sr.ht/~md0/pluralize.
-> https://github.com/ratrocket/go-pluralize is a mirror and may (will)
-> lag behind.
+> authoritative version is on
+> [sourcehut](https://git.sr.ht/~md0/pluralize).
+> The [github repo](https://github.com/ratrocket/go-pluralize) is a
+> mirror and may (will) lag behind.
 >
 > Most of what follows is from the original README, but I did remove
 > some things and slightly "correct" others.  Stuart out!

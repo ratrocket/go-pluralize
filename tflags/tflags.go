@@ -14,7 +14,8 @@ const (
 	TestCmdIsSingular
 	TestCmdPlural
 	TestCmdSingular
-	TestCmdAll = TestCmdIsPlural + TestCmdIsSingular + TestCmdPlural + TestCmdSingular
+
+	TestCmdAll = TestCmdIsPlural | TestCmdIsSingular | TestCmdPlural | TestCmdSingular
 )
 
 // TestCmd -- string constants.
@@ -41,19 +42,6 @@ func testCmdID(t TestCmd) string {
 
 	return innerTestCmdID[t]
 }
-
-// testCmdName -- map string to enum
-// func testCmdName() map[string]TestCmd {
-
-// 	return map[string]TestCmd{
-// 		strings.ToLower(testCmdUnknown):    TestCmdUnknown,
-// 		strings.ToLower(testCmdIsPlural):   TestCmdIsPlural,
-// 		strings.ToLower(testCmdIsSingular): TestCmdIsSingular,
-// 		strings.ToLower(testCmdPlural):     TestCmdPlural,
-// 		strings.ToLower(testCmdSingular):   TestCmdSingular,
-// 		strings.ToLower(testCmdAll):        TestCmdAll,
-// 	}
-// }
 
 // testCmdName -- map string to enum value.
 func testCmdName(s string) TestCmd {
@@ -84,21 +72,6 @@ func testCmdName(s string) TestCmd {
 // String -- stringify TestCmd.
 func (t TestCmd) String() string {
 	return testCmdID(t)
-}
-
-// Set -- set flag.
-func (t *TestCmd) Set(flag TestCmd) {
-	*t |= flag
-}
-
-// Clear -- clear flag.
-func (t *TestCmd) Clear(flag TestCmd) {
-	*t &^= flag
-}
-
-// Toggle -- toggle flag state.
-func (t *TestCmd) Toggle(flag TestCmd) {
-	*t ^= flag
 }
 
 // Has -- is flag set?.

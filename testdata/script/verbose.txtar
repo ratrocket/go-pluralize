@@ -1,0 +1,29 @@
+exec pluralize --verbose --options all deer fish chicken shark i
+cmp stdout want
+! stderr .
+
+-- want --
+IsPlural(deer)   => true
+IsSingular(deer) => true
+Plural(deer)     => deer
+Singular(deer)   => deer
+--
+IsPlural(fish)   => true
+IsSingular(fish) => true
+Plural(fish)     => fish
+Singular(fish)   => fish
+--
+IsPlural(chicken)   => false
+IsSingular(chicken) => true
+Plural(chicken)     => chickens
+Singular(chicken)   => chicken
+--
+IsPlural(shark)   => false
+IsSingular(shark) => true
+Plural(shark)     => sharks
+Singular(shark)   => shark
+--
+IsPlural(i)   => false
+IsSingular(i) => true
+Plural(i)     => we
+Singular(i)   => i

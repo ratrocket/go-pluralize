@@ -1,0 +1,35 @@
+# --plural --verbose
+
+exec pluralize --plural --verbose status
+stdout '\Astatuses\n\z'
+! stderr .
+
+# --plural --verbose --options all
+
+exec pluralize --plural --verbose --options all status
+stdout '\Astatuses\n\z'
+! stderr .
+
+# --plural --verbose --options isSingular,isPlural
+
+exec pluralize --plural --verbose --options isSingular,isPlural status
+stdout '\Astatuses\n\z'
+! stderr .
+
+# --singular --verbose
+
+exec pluralize --singular --verbose mountains
+stdout '\Amountain\n\z'
+! stderr .
+
+# --singular --verbose --options all
+
+exec pluralize --singular --verbose --options all mountains
+stdout '\Amountain\n\z'
+! stderr .
+
+# --singular --verbose --options plural,singular,isPlural
+
+exec pluralize --singular --verbose --options plural,singular,isPlural mountains
+stdout '\Amountain\n\z'
+! stderr .

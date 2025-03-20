@@ -1,0 +1,19 @@
+# --options plural,singular,cats,dogs
+
+! exec pluralize --options plural,singular,cats,dogs pumpkin
+! stdout .
+cmp stderr stderr.txt
+
+-- stderr.txt --
+unknown options: cats,dogs
+usage: pluralize [--options/-o ...] <word> [<words...>]
+  omit <words> to read stdin
+  --options/-o is a comma-separated list of any combo of:
+    all,isPlural,isSingular,plural,singular
+  --plural/-p, --singular/-s override --verbose and --options
+
+  -h, --help             print help
+  -o, --options string   output options (default "all")
+  -p, --plural           produce only plural
+  -s, --singular         produce only singular
+  -v, --verbose          verbose output

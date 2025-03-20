@@ -1,0 +1,3 @@
+exec pluralize -o plural cat
+stdout '\Acats\n\z'
+! stderr .

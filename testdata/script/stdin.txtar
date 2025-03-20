@@ -1,0 +1,38 @@
+# not verbose
+
+stdin input
+exec pluralize --options isPlural,plural
+cmp stdout not-verbose.txt
+stderr 'ctrl-C to quit'
+
+# verbose
+
+stdin input
+exec pluralize --verbose --options isPlural,plural
+cmp stdout verbose.txt
+stderr 'ctrl-C to quit'
+
+-- input --
+phone
+boat
+eggs
+-- not-verbose.txt --
+plur? false
+phones
+--
+plur? false
+boats
+--
+plur? true
+eggs
+--
+-- verbose.txt --
+IsPlural(phone)   => false
+Plural(phone)     => phones
+--
+IsPlural(boat)   => false
+Plural(boat)     => boats
+--
+IsPlural(eggs)   => true
+Plural(eggs)     => eggs
+--

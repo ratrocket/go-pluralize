@@ -1,0 +1,6 @@
+exec echo hello
+cmp stdout want
+! stderr .
+
+-- want --
+hello

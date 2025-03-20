@@ -2,9 +2,19 @@
 
 Pluralize and singularize any word
 
-## Acknowledgements
+## Acknowledgements, meta information
 
-> This is my personal fork of [gertd/go-pluralize](https://github.com/gertd/go-pluralize).
+> This is my (Stuart Fletcher/ratrocket on github/~md0 on sr.ht)
+> personal fork of
+> [gertd/go-pluralize](https://github.com/gertd/go-pluralize).
+>
+> If you for some reason have stumbled upon this repo, note that the
+> authoritative version is at https://git.sr.ht/~md0/pluralize.
+> https://github.com/ratrocket/go-pluralize is a mirror and may (will)
+> lag behind.
+>
+> Most of what follows is from the original README, but I did remove
+> some things and slightly "correct" others.  Stuart out!
 >
 > The go-pluralize module is the  Golang adaptation of the great work
 > from [Blake Embrey](https://www.npmjs.com/~blakeembrey) and other
@@ -36,13 +46,13 @@ commit
 
 To install the go module:
 
-    go get github.com/ratrocket/go-pluralize
+    go get md0.org/pluralize
 
 ## Usage
 
 *## Code
 
-    import pluralize "github.com/gertd/go-pluralize"
+    import "md0.org/pluralize"
 
     word := "Empire"
 
@@ -64,7 +74,7 @@ To install the go module:
 
 ### Installation
 
-	go install github.com/gertd/go-pluralize/cmd/pluralize
+	go install md0.org/pluralize/cmd/pluralize
 
 ### Usage
 

@@ -1,3 +1,3 @@
-module github.com/ratrocket/go-pluralize
+module md0.org/pluralize
 
 go 1.17

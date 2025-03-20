@@ -4,8 +4,8 @@ import (
 	"flag"
 	"fmt"
 
-	"github.com/ratrocket/go-pluralize"
-	"github.com/ratrocket/go-pluralize/tflags"
+	"md0.org/pluralize"
+	"md0.org/pluralize/tflags"
 )
 
 const (

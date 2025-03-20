@@ -6,7 +6,7 @@ import (
 	"os"
 	"testing"
 
-	"github.com/ratrocket/go-pluralize/tflags"
+	"md0.org/pluralize/tflags"
 )
 
 type TestEntry struct {

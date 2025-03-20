@@ -5,9 +5,9 @@ import (
 	"fmt"
 	"os"
 
-	"github.com/gertd/go-pluralize"
-	"github.com/gertd/go-pluralize/pkg/tflags"
-	"github.com/gertd/go-pluralize/pkg/version"
+	"github.com/ratrocket/go-pluralize"
+	"github.com/ratrocket/go-pluralize/pkg/tflags"
+	"github.com/ratrocket/go-pluralize/pkg/version"
 )
 
 const (

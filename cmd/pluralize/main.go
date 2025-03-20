@@ -3,11 +3,9 @@ package main
 import (
 	"flag"
 	"fmt"
-	"os"
 
 	"github.com/ratrocket/go-pluralize"
-	"github.com/ratrocket/go-pluralize/pkg/tflags"
-	"github.com/ratrocket/go-pluralize/pkg/version"
+	"github.com/ratrocket/go-pluralize/tflags"
 )
 
 const (
@@ -16,17 +14,11 @@ const (
 
 func main() {
 	var (
-		word        = flag.String("word", "", "input value")
-		cmd         = flag.String("cmd", "All", "command [All|IsPlural|IsSingular|Plural|Singular]")
-		showVersion = flag.Bool("version", false, "display version info")
+		word = flag.String("word", "", "input value")
+		cmd  = flag.String("cmd", "All", "command [All|IsPlural|IsSingular|Plural|Singular]")
 	)
 
 	flag.Parse()
-
-	if showVersion != nil && *showVersion {
-		displayVersionInfo(appName)
-		return
-	}
 
 	if word == nil || len(*word) == 0 {
 		fmt.Printf("-word not specified\n")
@@ -56,11 +48,4 @@ func main() {
 	if testCmd.Has(tflags.TestCmdSingular) {
 		fmt.Printf("Singular(%s)   => %s\n", *word, pluralize.Singular(*word))
 	}
-}
-
-func displayVersionInfo(name string) {
-	fmt.Fprintf(os.Stdout, "%s - %s\n",
-		name,
-		version.GetInfo(),
-	)
 }

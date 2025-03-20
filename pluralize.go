@@ -27,7 +27,6 @@ type Client struct {
 func NewClient() *Client {
 	client := Client{}
 	client.init()
-
 	return &client
 }
 
@@ -46,9 +45,10 @@ func (c *Client) init() {
 }
 
 // Pluralize -- Pluralize or singularize a word based on the passed in count.
-// 	word: the word to pluralize
-// 	count: how many of the word exist
-// 	inclusive: whether to prefix with the number (e.g. 3 ducks)
+//
+//	word: the word to pluralize
+//	count: how many of the word exist
+//	inclusive: whether to prefix with the number (e.g. 3 ducks)
 func (c *Client) Pluralize(word string, count int, inclusive bool) string {
 	pluralized := func() func(string) string {
 		if count == 1 {

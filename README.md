@@ -90,7 +90,7 @@ act more in line with how I think command line tools should behave.
 - which brings up... you can list multiple words to operate on
 - if you list no words, the program will read standard input (so you can
   use it somewhat interactively)
-- `--options` options (the old `-cmd` flag) can be combined.  Use a
+- `--options/-o` options (the old `-cmd` flag) can be combined.  Use a
   comma-separated list, eg, `pluralize -o plural,singular`.
 - `--plural/-p` option as shorthand for `--options plural`
 - `--singular/-s` option as shorthand for `--options singular`
